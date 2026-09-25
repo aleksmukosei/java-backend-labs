@@ -1,0 +1,7 @@
+target/
+.idea/
+*.iml
+**/dependency-reduced-pom.xml
+
+# результат работы программы
+origin-count.csv
