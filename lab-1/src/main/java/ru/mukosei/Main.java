@@ -1,5 +1,6 @@
 package ru.mukosei;
 
+import ru.mukosei.demo.CharacterCrudDemo;
 import ru.mukosei.mapper.CharacterCsvMapper;
 import ru.mukosei.model.RickAndMortyCharacter;
 import ru.mukosei.repository.CharacterCsvRepository;
@@ -31,6 +32,9 @@ public class Main {
         // 3) запись результата в новый файл
         new OriginCountCsvWriter().write(RESULT_FILE, countByOrigin);
         System.out.println("Результат записан в " + RESULT_FILE.toAbsolutePath());
+
+        // дополнительное задание: CRUD над исходным csv-файлом
+        new CharacterCrudDemo(repository).run();
     }
 
     private static Path resolveCharactersFile() {
